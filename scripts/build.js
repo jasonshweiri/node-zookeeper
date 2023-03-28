@@ -20,7 +20,7 @@ if (env.isWindows) {
     exec(`cmake --build .${output}`);
 } else {
     const flags = '-w -g';
-    let configureCmd = `./configure CFLAGS='${flags}' --without-syncapi --disable-shared --with-pic --without-cppunit`;
+    let configureCmd = `./configure CFLAGS='${flags}' --without-syncapi --with-sasl=no --with-pic --without-cppunit`;
     let makeCmd = 'make';
 
     if (!env.isVerbose) {
