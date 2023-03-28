@@ -32,10 +32,10 @@
               "GCC_ENABLE_CPP_EXCEPTIONS": "YES",
               "MACOSX_DEPLOYMENT_TARGET": "<!(sw_vers -productVersion)",
               'OTHER_CPLUSPLUSFLAGS' : [
-                '-stdlib=libc++', '-g'
+                '-g'
               ],
               'OTHER_LDFLAGS': [
-                '-stdlib=libc++', '-g',
+                '-g',
               ],
             }
           }
@@ -52,7 +52,7 @@
               "<(module_root_dir)/deps/zookeeper-client-c/.libs/libzookeeper_st.a"
             ],
             'cflags_cc': [
-              '-stdlib=libc++', '-g',
+              '-g',
             ],
           }
         ],
