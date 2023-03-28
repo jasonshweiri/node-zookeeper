@@ -21,7 +21,7 @@ function applyPatches() {
         shell.sed('-i', /(FIPS_mode\(\) == 0)/, '0 == 0', `${destination}/zookeeper.c`);
         shell.sed('-i', /(FIPS mode is OFF)/, 'Disabled the FIPS check', `${destination}/zookeeper.c`);
     } else {
-        shell.exec(`patch -d ${env.rootFolder} -p0 --forward < ${env.workFolder}/no-fipsmode.patch`);
+        // shell.exec(`patch -d ${env.rootFolder} -p0 --forward < ${env.workFolder}/no-fipsmode.patch`);
     }
 }
 
