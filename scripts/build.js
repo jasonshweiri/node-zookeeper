@@ -19,7 +19,7 @@ if (env.isWindows) {
     exec(`cmake -DWANT_SYNCAPI=OFF -DCMAKE_GENERATOR_PLATFORM=${process.arch} .${output}`);
     exec(`cmake --build .${output}`);
 } else {
-    const flags = '-w';
+    const flags = '-w -g';
     let configureCmd = `./configure CFLAGS='${flags}' --without-syncapi --disable-shared --with-pic --without-cppunit`;
     let makeCmd = 'make';
 

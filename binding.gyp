@@ -13,6 +13,7 @@
       ],
       "cflags": [
         "-w",
+        "-g",
         "-O0"
       ],
       "conditions": [
